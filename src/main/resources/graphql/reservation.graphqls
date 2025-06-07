@@ -15,13 +15,3 @@ input ReservationInput {
     workspaceId: ID!
 }
 
-extend type Query {
-    getReservations: [Reservation!]!
-    getReservationById(id: ID!): Reservation
-}
-
-extend type Mutation {
-    createReservation(input: ReservationInput!): Reservation!
-    cancelReservation(id: ID!): Boolean!
-}
-

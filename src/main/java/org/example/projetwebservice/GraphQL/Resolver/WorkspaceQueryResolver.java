@@ -1,15 +1,15 @@
 package org.example.projetwebservice.GraphQL.Resolver;
 
-
-import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.example.projetwebservice.Model.Workspace;
 import org.example.projetwebservice.Repository.WorkspaceRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@Component
-public class WorkspaceQueryResolver implements GraphQLQueryResolver {
+@Controller
+public class WorkspaceQueryResolver {
 
     private final WorkspaceRepository workspaceRepository;
 
@@ -17,13 +17,13 @@ public class WorkspaceQueryResolver implements GraphQLQueryResolver {
         this.workspaceRepository = workspaceRepository;
     }
 
+    @QueryMapping
     public List<Workspace> getWorkspaces() {
         return workspaceRepository.findAll();
     }
 
-    public Workspace getWorkspaceById(Long id) {
+    @QueryMapping
+    public Workspace getWorkspaceById(@Argument Long id) {
         return workspaceRepository.findById(id).orElse(null);
     }
 }
-
-

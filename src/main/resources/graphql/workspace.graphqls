@@ -14,12 +14,4 @@ input WorkspaceInput {
     type: WorkspaceType!
 }
 
-extend type Query {
-    getWorkspaces: [Workspace!]!
-    getWorkspaceById(id: ID!): Workspace
-}
 
-extend type Mutation {
-    createWorkspace(input: WorkspaceInput!): Workspace!
-    deleteWorkspace(id: ID!): Boolean!
-}

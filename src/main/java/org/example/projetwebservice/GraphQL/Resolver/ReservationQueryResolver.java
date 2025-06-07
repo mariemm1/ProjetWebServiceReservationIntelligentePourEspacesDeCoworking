@@ -1,14 +1,15 @@
 package org.example.projetwebservice.GraphQL.Resolver;
 
-import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.example.projetwebservice.Model.Reservation;
 import org.example.projetwebservice.Repository.ReservationRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@Component
-public class ReservationQueryResolver implements GraphQLQueryResolver {
+@Controller
+public class ReservationQueryResolver {
 
     private final ReservationRepository reservationRepository;
 
@@ -16,11 +17,13 @@ public class ReservationQueryResolver implements GraphQLQueryResolver {
         this.reservationRepository = reservationRepository;
     }
 
+    @QueryMapping
     public List<Reservation> getReservations() {
         return reservationRepository.findAll();
     }
 
-    public Reservation getReservationById(Long id) {
+    @QueryMapping
+    public Reservation getReservationById(@Argument Long id) {
         return reservationRepository.findById(id).orElse(null);
     }
 }

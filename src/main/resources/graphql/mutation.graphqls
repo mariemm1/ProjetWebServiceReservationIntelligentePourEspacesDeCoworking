@@ -4,8 +4,20 @@ type Mutation {
     updateUser(id: ID!, input: UserInput!): User!
     deleteUser(id: ID!): Boolean!
 
+    # Workspaces
+    createWorkspace(input: WorkspaceInput!): Workspace!
+    updateWorkspace(id: ID!, input: WorkspaceInput!): Workspace!
+    deleteWorkspace(id: ID!): Boolean!
+
     # Reservations
     createReservation(input: ReservationInput!): Reservation!
     updateReservation(id: ID!, input: ReservationInput!): Reservation!
     cancelReservation(id: ID!): Boolean!
+
+
+
 }
+
+
+
+
