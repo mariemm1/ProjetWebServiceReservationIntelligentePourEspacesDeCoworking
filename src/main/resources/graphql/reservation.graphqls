@@ -1,0 +1,16 @@
+type Reservation {
+    id: ID!
+    date: String!
+    startTime: String!
+    endTime: String!
+    user: User!
+    workspace: Workspace!
+}
+
+input ReservationInput {
+    date: String!
+    startTime: String!
+    endTime: String!
+    userId: ID!
+    workspaceId: ID!
+}
