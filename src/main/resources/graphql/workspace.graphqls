@@ -1,0 +1,11 @@
+enum WorkspaceType {
+    DESK
+    ROOM
+}
+
+type Workspace {
+    id: ID!
+    name: String!
+    type: WorkspaceType!
+    reservations: [Reservation!]!
+}

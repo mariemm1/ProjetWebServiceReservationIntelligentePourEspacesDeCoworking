@@ -1,0 +1,11 @@
+type Mutation {
+    # Users
+    createUser(input: UserInput!): User!
+    updateUser(id: ID!, input: UserInput!): User!
+    deleteUser(id: ID!): Boolean!
+
+    # Reservations
+    createReservation(input: ReservationInput!): Reservation!
+    updateReservation(id: ID!, input: ReservationInput!): Reservation!
+    cancelReservation(id: ID!): Boolean!
+}

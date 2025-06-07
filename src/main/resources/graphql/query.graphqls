@@ -1,0 +1,13 @@
+type Query {
+    # Users
+    getUsers: [User!]!
+    getUserById(id: ID!): User
+
+    # Workspaces
+    getWorkspaces: [Workspace!]!
+    getWorkspaceById(id: ID!): Workspace
+
+    # Reservations
+    getReservations: [Reservation!]!
+    getReservationById(id: ID!): Reservation
+}
