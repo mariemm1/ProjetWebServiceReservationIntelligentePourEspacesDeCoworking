@@ -9,3 +9,17 @@ type Workspace {
     type: WorkspaceType!
     reservations: [Reservation!]!
 }
+input WorkspaceInput {
+    name: String!
+    type: WorkspaceType!
+}
+
+extend type Query {
+    getWorkspaces: [Workspace!]!
+    getWorkspaceById(id: ID!): Workspace
+}
+
+extend type Mutation {
+    createWorkspace(input: WorkspaceInput!): Workspace!
+    deleteWorkspace(id: ID!): Boolean!
+}
