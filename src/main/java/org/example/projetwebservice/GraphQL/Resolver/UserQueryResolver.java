@@ -1,14 +1,15 @@
 package org.example.projetwebservice.GraphQL.Resolver;
 
-import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.example.projetwebservice.Model.User;
 import org.example.projetwebservice.Repository.UserRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.graphql.data.method.annotation.Argument;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
-@Component
-public class UserQueryResolver implements GraphQLQueryResolver {
+@Controller
+public class UserQueryResolver {
 
     private final UserRepository userRepository;
 
@@ -16,11 +17,13 @@ public class UserQueryResolver implements GraphQLQueryResolver {
         this.userRepository = userRepository;
     }
 
+    @QueryMapping
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long id) {
+    @QueryMapping
+    public User getUserById(@Argument Long id) {
         return userRepository.findById(id).orElse(null);
     }
 }
