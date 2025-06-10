@@ -122,8 +122,8 @@ query {
             }
         ]
     }
-}
-'''
+```}
+
 ---
 
 ## 🔐 5. Contrôle d'accès basé sur les rôles
