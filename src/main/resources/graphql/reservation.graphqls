@@ -14,4 +14,12 @@ input ReservationInput {
     userId: ID!
     workspaceId: ID!
 }
+input ReservationRequestInput {
+    userId: ID # Only required for admin use
+    workspaceId: ID!
+    date: String!
+    startTime: String!
+    endTime: String!
+}
+
 

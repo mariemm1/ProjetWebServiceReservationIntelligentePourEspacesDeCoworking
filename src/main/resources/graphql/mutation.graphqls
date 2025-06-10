@@ -3,6 +3,9 @@ type Mutation {
     createUser(input: UserInput!): User!
     updateUser(id: ID!, input: UserInput!): User!
     deleteUser(id: ID!): Boolean!
+    register(input: RegisterInput!): AuthPayload!
+    login(input: LoginInput!): AuthResponse!
+    logout: String
 
     # Workspaces
     createWorkspace(input: WorkspaceInput!): Workspace!
@@ -10,6 +13,7 @@ type Mutation {
     deleteWorkspace(id: ID!): Boolean!
 
     # Reservations
+    createMyReservation(input: ReservationRequestInput!): Reservation
     createReservation(input: ReservationInput!): Reservation!
     updateReservation(id: ID!, input: ReservationInput!): Reservation!
     cancelReservation(id: ID!): Boolean!

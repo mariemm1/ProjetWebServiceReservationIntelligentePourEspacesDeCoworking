@@ -1,4 +1,4 @@
-package org.example.projetwebservice.GraphQL.Resolver;
+package org.example.projetwebservice.Controller;
 
 import org.example.projetwebservice.DTO.AuthRequest;
 import org.example.projetwebservice.DTO.AuthResponse;
@@ -9,11 +9,11 @@ import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class AuthGraphQLResolver {
+public class AuthGraphQLController {
 
     private final AuthService authService;
 
-    public AuthGraphQLResolver(AuthService authService) {
+    public AuthGraphQLController(AuthService authService) {
         this.authService = authService;
     }
 

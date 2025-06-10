@@ -7,6 +7,7 @@ type User {
     id: ID!
     name: String!
     email: String!
+    password: String!
     role: Role!
     reservations: [Reservation!]!
 }
@@ -14,5 +15,25 @@ type User {
 input UserInput {
     name: String!
     email: String!
+    password: String!
     role: Role!
+}
+
+input RegisterInput {
+    name: String!
+    email: String!
+    password: String!
+}
+
+input LoginInput{
+    email: String!
+    password: String!
+}
+
+type AuthPayload {
+    token: String!
+}
+
+type AuthResponse {
+    accessToken: String!
 }

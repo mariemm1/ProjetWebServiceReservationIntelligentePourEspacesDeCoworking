@@ -1,12 +1,12 @@
-package org.example.projetwebservice.GraphQL.Input;
+package org.example.projetwebservice.DTO;
 
 import org.example.projetwebservice.Model.Enum.WorkspaceType;
 
-public class WorkspaceInput {
+public class WorkspaceRequest {
     private String name;
     private WorkspaceType type;
 
-    public WorkspaceInput() {}
+    public WorkspaceRequest() {}
 
     public String getName() {
         return name;

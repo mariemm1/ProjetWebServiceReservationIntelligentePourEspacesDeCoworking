@@ -6,8 +6,12 @@ type Query {
     # Workspaces
     getWorkspaces: [Workspace!]!
     getWorkspaceById(id: ID!): Workspace
+    getAvailableWorkspaces(date: String!, startHour: Int!, endHour: Int!): [Workspace!]!
+
+
 
     # Reservations
     getReservations: [Reservation!]!
     getReservationById(id: ID!): Reservation
+    getMyReservations: [Reservation!]!
 }
