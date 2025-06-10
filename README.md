@@ -51,8 +51,9 @@ L'objectif est de concevoir un **web service intelligent** qui :
 
 #### Exemple – Créer une réservation (CLIENT)
 
-```graphql
+
  #####Requeste #####
+```
 mutation {
   createMyReservation(input: {
     workspaceId: 3
@@ -69,8 +70,9 @@ mutation {
     }
   }
 }
+```
 #####Réponse#####
-
+```
 {
     "data": {
         "createMyReservation": {
@@ -84,10 +86,11 @@ mutation {
         }
     }
 }
-
+```
 
 #### Exemple  – Obtenir les espaces disponibles (CLIENT)
 #####Requeste #####
+```
 query {
   getAvailableWorkspaces (date: "2025-06-20", startHour: 8, endHour: 10) {
     id
@@ -95,8 +98,9 @@ query {
     type
   }
 }
+```
 #####Réponse#####
-
+```
 {
     "data": {
         "getAvailableWorkspaces": [
@@ -122,8 +126,8 @@ query {
             }
         ]
     }
-```}
-
+}
+```
 ---
 
 ## 🔐 5. Contrôle d'accès basé sur les rôles
