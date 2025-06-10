@@ -142,6 +142,7 @@ Mutation	createMyReservation(input)	CLIENT uniquement
 Mutation	updateReservation(id, input)	ADMIN ou propriétaire
 Mutation	cancelReservation(id)	ADMIN ou propriétaire
 
-![Ma capture d'écran](images/classe.png)
+![classe](https://github.com/user-attachments/assets/ad87ffac-fdbb-44c3-a254-27aee74b7998)
+
 
 
