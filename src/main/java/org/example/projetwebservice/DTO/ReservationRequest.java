@@ -1,9 +1,9 @@
-package org.example.projetwebservice.GraphQL.Input;
+package org.example.projetwebservice.DTO;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class ReservationInput {
+public class ReservationRequest {
 
 
     private LocalDate date;
@@ -12,7 +12,7 @@ public class ReservationInput {
     private Long userId;
     private Long workspaceId;
 
-    public ReservationInput() {}
+    public ReservationRequest() {}
 
     public LocalDate getDate() {
         return date;

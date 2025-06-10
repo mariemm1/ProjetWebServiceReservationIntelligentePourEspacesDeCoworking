@@ -22,3 +22,4 @@ public class AuthenticatedUserService {
                 .orElseThrow(() -> new RuntimeException("Utilisateur non trouvé"));
     }
 }
+

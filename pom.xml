@@ -18,7 +18,7 @@
     <description>Projet de Web Service avec GraphQL et Spring Boot</description>
 
     <properties>
-        <java.version>21</java.version> <!-- Java 23 n'est pas encore supporté officiellement -->
+        <java.version>21</java.version>
     </properties>
 
     <dependencies>
