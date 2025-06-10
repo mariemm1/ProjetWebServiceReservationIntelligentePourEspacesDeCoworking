@@ -23,7 +23,7 @@ L'objectif est de concevoir un **web service intelligent** qui :
 
 #### 📌 Diagramme de class :
 
-
+![Capture de l'app](images/classe.png)
 
 ### ⚙️ 3. Liste des Fonctionnalités (Web Service)
 
@@ -142,7 +142,8 @@ Mutation	createMyReservation(input)	CLIENT uniquement
 Mutation	updateReservation(id, input)	ADMIN ou propriétaire
 Mutation	cancelReservation(id)	ADMIN ou propriétaire
 
-![classe](https://github.com/user-attachments/assets/ad87ffac-fdbb-44c3-a254-27aee74b7998)
+
+
 
 
 
