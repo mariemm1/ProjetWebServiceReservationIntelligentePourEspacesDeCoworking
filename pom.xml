@@ -41,12 +41,27 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <!-- JJWT API -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.1</version>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.11.5</version>
+        </dependency>
+        <!-- Implémentation (signing) -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
         </dependency>
 
+        <!-- JSON serializer/deserializer -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- Peut aussi être jjwt-gson -->
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
         <!-- MySQL -->
         <dependency>
             <groupId>com.mysql</groupId>
@@ -67,7 +82,28 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- JJWT API -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.11.5</version>
+        </dependency>
 
+        <!-- Implémentation pour signer les JWT -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Implémentation pour encoder en base64 les JWT -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- ou jjwt-gson -->
+            <version>0.11.5</version>
+            <scope>runtime</scope>
+        </dependency>
         <!-- Thymeleaf (facultatif si pas de vues HTML) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
