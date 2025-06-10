@@ -1,6 +1,4 @@
-# ProjetWebServiceReservationIntelligentePourEspacesDeCoworking
-Academic project with GraphQL via Spring GraphQL
-# 🧠 Réservation Intelligente pour Espaces de Coworking
+# 🧠 Réservation Intelligente pour Espaces de Coworking (Academic project [GraphQL,SpringBoot])
 
 ## 🚀 Solution Proposée
 
