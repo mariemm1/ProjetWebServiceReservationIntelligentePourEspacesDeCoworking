@@ -11,4 +11,5 @@ import java.util.List;
 public interface ReservationRepository extends JpaRepository<Reservation, Long> {
     List<Reservation> findByWorkspaceIdAndDate(Long workspaceId, LocalDate date);
 
+    List<Reservation> findByUserId(Long id);
 }
