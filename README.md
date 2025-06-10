@@ -51,8 +51,9 @@ L'objectif est de concevoir un **web service intelligent** qui :
 
 #### Exemple – Créer une réservation (CLIENT)
 
-```graphql
- #####Requeste #####
+
+ #####Requeste 
+```
 mutation {
   createMyReservation(input: {
     workspaceId: 3
@@ -69,8 +70,9 @@ mutation {
     }
   }
 }
-#####Réponse#####
-
+```
+#####Réponse
+```
 {
     "data": {
         "createMyReservation": {
@@ -84,10 +86,11 @@ mutation {
         }
     }
 }
-
+```
 
 #### Exemple  – Obtenir les espaces disponibles (CLIENT)
-#####Requeste #####
+#####Requeste 
+```
 query {
   getAvailableWorkspaces (date: "2025-06-20", startHour: 8, endHour: 10) {
     id
@@ -95,8 +98,9 @@ query {
     type
   }
 }
-#####Réponse#####
-
+```
+#####Réponse
+```
 {
     "data": {
         "getAvailableWorkspaces": [
@@ -123,7 +127,7 @@ query {
         ]
     }
 }
-
+```
 ---
 
 🔐 5. Contrôle d'accès basé sur les rôles
@@ -131,16 +135,18 @@ Rôle	Permissions
 CLIENT	: Réserver, consulter ses réservations, voir les espaces disponibles
 ADMIN	: Gérer tous les utilisateurs, espaces, réservations
 
+---
+### 📎 6. Endpoints principaux (via GraphQL)
 
-📎 6. Endpoints principaux (via GraphQL)
+| Type     | Nom de l'opération                              | Description                                      |
+|----------|--------------------------------------------------|--------------------------------------------------|
+| Query    | `getWorkspaces()`                               | Tous les espaces (filtrés selon le rôle)         |
+| Query    | `getAvailableWorkspaces(date, startHour, endHour)` | Espaces sans conflit pour un créneau donné    |
+| Mutation | `createWorkspace(input)`                         | ADMIN uniquement                                 |
+| Mutation | `createMyReservation(input)`                     | CLIENT uniquement                                |
+| Mutation | `updateReservation(id, input)`                   | ADMIN ou propriétaire                            |
+| Mutation | `cancelReservation(id)`                          | ADMIN ou propriétaire                            |
 
-Type	Nom de l'opération	Description
-Query	getWorkspaces()	Tous les espaces (filtré selon rôle)
-Query	getAvailableWorkspaces(date, startHour, endHour)	Espaces sans conflit pour un créneau donné
-Mutation	createWorkspace(input)	ADMIN uniquement
-Mutation	createMyReservation(input)	CLIENT uniquement
-Mutation	updateReservation(id, input)	ADMIN ou propriétaire
-Mutation	cancelReservation(id)	ADMIN ou propriétaire
 
 
 
