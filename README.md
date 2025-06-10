@@ -123,13 +123,16 @@ query {
         ]
     }
 }
-
+'''
 ---
 
-🔐 5. Contrôle d'accès basé sur les rôles
-Rôle	Permissions
-CLIENT	: Réserver, consulter ses réservations, voir les espaces disponibles
-ADMIN	: Gérer tous les utilisateurs, espaces, réservations
+## 🔐 5. Contrôle d'accès basé sur les rôles
+
+| Rôle   | Permissions                                                                 |
+|--------|------------------------------------------------------------------------------|
+| CLIENT | Réserver, consulter ses réservations, voir les espaces disponibles          |
+| ADMIN  | Gérer tous les utilisateurs, espaces, réservations                          |
+
 
 
 📎 6. Endpoints principaux (via GraphQL)
