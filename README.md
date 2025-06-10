@@ -124,6 +124,8 @@ query {
     }
 }
 
+---
+
 🔐 5. Contrôle d'accès basé sur les rôles
 Rôle	Permissions
 CLIENT	: Réserver, consulter ses réservations, voir les espaces disponibles
