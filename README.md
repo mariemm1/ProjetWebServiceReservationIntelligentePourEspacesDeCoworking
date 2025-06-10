@@ -50,7 +50,7 @@ L'objectif est de concevoir un **web service intelligent** qui :
 #### Exemple – Créer une réservation (CLIENT)
 
 
- #####Requeste 
+ ####requête
 ```
 mutation {
   createMyReservation(input: {
@@ -69,7 +69,7 @@ mutation {
   }
 }
 ```
-#####Réponse
+####Réponse
 ```
 {
     "data": {
@@ -87,7 +87,7 @@ mutation {
 ```
 
 #### Exemple  – Obtenir les espaces disponibles (CLIENT)
-#####Requeste 
+####requête
 ```
 query {
   getAvailableWorkspaces (date: "2025-06-20", startHour: 8, endHour: 10) {
@@ -97,7 +97,7 @@ query {
   }
 }
 ```
-#####Réponse
+####Réponse
 ```
 {
     "data": {
