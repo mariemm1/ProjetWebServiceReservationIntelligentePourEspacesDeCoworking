@@ -31,6 +31,13 @@ L'objectif est de concevoir un **web service intelligent** qui :
 - `/login` → Génère un JWT
 - Accès conditionnel aux mutations/queries selon le rôle (`@PreAuthorize` implicite)
 
+#### 👤 Gestion des Utilisateurs :
+- Créer des utilisateurs (ADMIN)
+- Voir la liste de tous les utilisateurs (ADMIN)
+- Rechercher un utilisateur par son identifiant (ADMIN)
+- Supprimer un utilisateur (ADMIN)
+- (Optionnel) Modifier les informations d’un utilisateur (nom, email, rôle)
+
 #### 📆 Gestion des Réservations :
 - Créer une réservation (par `CLIENT` pour lui-même ou par `ADMIN` pour un autre utilisateur)
 - Modifier / Supprimer une réservation
@@ -161,7 +168,7 @@ query {
 #### 🎯 Rôles & Permissions
 
 | Rôle   | Permissions                                                                 |
-|--------|------------------------------------------------------------------------------|
+|--------|-----------------------------------------------------------------------------|
 | CLIENT | Réserver, consulter ses réservations, voir les espaces disponibles          |
 | ADMIN  | Gérer tous les utilisateurs, espaces, réservations                          |
 
@@ -170,14 +177,14 @@ query {
 ---
 ### 📎 6. Endpoints principaux (via GraphQL)
 
-| Type     | Nom de l'opération                              | Description                                      |
-|----------|--------------------------------------------------|--------------------------------------------------|
-| Query    | `getWorkspaces()`                               | Tous les espaces          |
-| Query    | `getAvailableWorkspaces(date, startHour, endHour)` | Espaces sans conflit pour un créneau donné    |
-| Mutation | `createWorkspace(input)`                         | ADMIN uniquement                                 |
-| Mutation | `createMyReservation(input)`                     | CLIENT uniquement                                |
-| Mutation | `updateReservation(id, input)`                   | ADMIN ou propriétaire                            |
-| Mutation | `cancelReservation(id)`                          | ADMIN ou propriétaire                            |
+| Type     | Nom de l'opération                                | Description                                      |
+|----------|---------------------------------------------------|--------------------------------------------------|
+| Query    | `getWorkspaces()`                                 | Tous les espaces                                 |
+| Query    | `getAvailableWorkspaces(date, startHour, endHour)`| Espaces sans conflit pour un créneau donné       |
+| Mutation | `createWorkspace(input)`                          | ADMIN uniquement                                 |
+| Mutation | `createMyReservation(input)`                      | CLIENT uniquement                                |
+| Mutation | `updateReservation(id, input)`                    | ADMIN ou propriétaire                            |
+| Mutation | `cancelReservation(id)`                           | ADMIN ou propriétaire                            |
 
 
 
