@@ -44,6 +44,33 @@ L'objectif est de concevoir un **web service intelligent** qui :
 
 ---
 
+### 🌐 3.1 Point d'entrée GraphQL (Endpoint)
+
+---
+Toutes les requêtes GraphQL (queries et mutations) sont envoyées vers un seul endpoint HTTP :
+```
+POST /graphql
+```
+**📌 Exemple d’URL en environnement local :**
+```
+[POST /graphql](http://localhost:8081/graphql)
+```
+**📦 Format attendu :**
+Le serveur attend une requête POST avec un corps JSON de la forme suivante :
+```
+query {
+  getUserById(id: 4) {
+    id
+    name
+    email
+    password
+    role
+  }
+}
+
+```
+
+---
 ### 🧾 4. Schéma des Requêtes & Réponses GraphQL
 
 #### Exemple – Créer une réservation (CLIENT)
