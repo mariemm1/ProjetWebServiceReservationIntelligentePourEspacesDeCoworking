@@ -22,6 +22,8 @@ L'objectif est de concevoir un **web service intelligent** qui :
 
 ![Capture de l'app](images/classe.png)
 
+---
+
 ### ⚙️ 3. Liste des Fonctionnalités (Web Service)
 
 #### ✅ Authentification & rôles :
