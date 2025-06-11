@@ -13,7 +13,6 @@ L'objectif est de concevoir un **web service intelligent** qui :
 - Garantit l’**exclusivité des créneaux réservés**.
 - Permet une **consultation en temps réel** des disponibilités.
 - Prend en charge les **règles de rôles (ADMIN vs CLIENT)**.
-- S’intègre à une interface (potentiellement web/mobile) via **GraphQL**.
 
 ---
 
@@ -50,7 +49,7 @@ L'objectif est de concevoir un **web service intelligent** qui :
 #### Exemple – Créer une réservation (CLIENT)
 
 
- ####requête
+ **requête**
 ```
 mutation {
   createMyReservation(input: {
@@ -69,7 +68,7 @@ mutation {
   }
 }
 ```
-####Réponse
+**Réponse**
 ```
 {
     "data": {
@@ -87,7 +86,7 @@ mutation {
 ```
 
 #### Exemple  – Obtenir les espaces disponibles (CLIENT)
-####requête
+**requête**
 ```
 query {
   getAvailableWorkspaces (date: "2025-06-20", startHour: 8, endHour: 10) {
@@ -97,7 +96,7 @@ query {
   }
 }
 ```
-####Réponse
+**Réponse**
 ```
 {
     "data": {
@@ -144,7 +143,7 @@ query {
 
 | Type     | Nom de l'opération                              | Description                                      |
 |----------|--------------------------------------------------|--------------------------------------------------|
-| Query    | `getWorkspaces()`                               | Tous les espaces (filtrés selon le rôle)         |
+| Query    | `getWorkspaces()`                               | Tous les espaces          |
 | Query    | `getAvailableWorkspaces(date, startHour, endHour)` | Espaces sans conflit pour un créneau donné    |
 | Mutation | `createWorkspace(input)`                         | ADMIN uniquement                                 |
 | Mutation | `createMyReservation(input)`                     | CLIENT uniquement                                |
